@@ -9,6 +9,19 @@ require("lazy").setup {
             vim.cmd([[highlight Normal guibg=None]])
         end
     },
+    {
+        'akinsho/bufferline.nvim',
+        version = "v3.*",
+        dependencies = { { 'nvim-tree/nvim-web-devicons', name = "other-nvim-web-devicons" } },
+        opts = {
+            options = {
+                close_command = "<leader>x",
+                diagnostics = "nvim_lsp",
+                offsets = { { filetype = "neo-tree", text = "File Explorer" } },
+            }
+        },
+        config = true
+    },
     -- statusline
     {
         "nvim-lualine/lualine.nvim",
