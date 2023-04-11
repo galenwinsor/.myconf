@@ -2,7 +2,6 @@ local M = {}
 
 M.load_mappings = function(section_name)
 	-- a table mapping a keymap mode to keymaps
-	print("Table name:", section_name)
 	local keymaps_table = require("core.keymaps")[section_name]
 
 	for mode, mode_mappings in pairs(keymaps_table) do
