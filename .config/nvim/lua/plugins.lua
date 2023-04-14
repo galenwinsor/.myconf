@@ -1,11 +1,15 @@
 require("lazy").setup {
     {
-        "sainnhe/everforest",
-        config = function()
+        "catppuccin/nvim",
+        name = "catppuccin",
+        opts = {
+            flavour = "frappe",
+            transparent_background = true,
+        },
+        config = function(_, opts)
+            require("catppuccin").setup(opts)
             vim.opt.termguicolors = true
-            vim.g.everforest_background = "soft"
-            vim.g.everforest_transparent_background = 2
-            vim.cmd.colorscheme("everforest")
+            vim.cmd.colorscheme("catppuccin")
             vim.cmd([[highlight Normal guibg=None]])
         end
     },
@@ -13,9 +17,11 @@ require("lazy").setup {
         'akinsho/bufferline.nvim',
         version = "v3.*",
         dependencies = { { 'nvim-tree/nvim-web-devicons', name = "other-nvim-web-devicons" } },
+        init = function()
+            require("functions").load_mappings("bufferline")
+        end,
         opts = {
             options = {
-                close_command = "<leader>x",
                 diagnostics = "nvim_lsp",
                 offsets = { { filetype = "neo-tree", text = "File Explorer" } },
             }
@@ -54,6 +60,9 @@ require("lazy").setup {
     -- lsp
     {
         "VonHeikemen/lsp-zero.nvim",
+        init = function()
+            require("functions").load_mappings("lsp")
+        end,
         dependencies = {
             "neovim/nvim-lspconfig",
             "williamboman/mason.nvim",
@@ -74,7 +83,7 @@ require("lazy").setup {
             lsp.on_attach(function(client, bufnr)
                 lsp.default_keymaps({ buffer = bufnr })
 
-                local allow_format = { 'lua_ls', 'rust_analyzer' }
+                local allow_format = { 'lua_ls', 'tsserver', "svelte" }
                 if vim.tbl_contains(allow_format, client.name) then
                     require('lsp-format').on_attach(client)
                 end

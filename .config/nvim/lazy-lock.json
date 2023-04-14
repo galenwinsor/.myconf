@@ -1,12 +1,12 @@
 {
   "LuaSnip": { "branch": "master", "commit": "225ef9a02c44dac1f52a53886980553765ceb537" },
   "bufferline.nvim": { "branch": "main", "commit": "eb4e95be22c55890b90fc01a8223e0c0ea4a0862" },
+  "catppuccin": { "branch": "main", "commit": "f078aa49bef4cb9e7b86f07b607c6e98c95b9fb5" },
   "cmp-buffer": { "branch": "main", "commit": "3022dbc9166796b644a841a02de8dd1cc1d311fa" },
   "cmp-nvim-lsp": { "branch": "main", "commit": "0e6b2ed705ddcff9738ec4ea838141654f12eeef" },
   "cmp-nvim-lua": { "branch": "main", "commit": "f3491638d123cfd2c8048aefaf66d246ff250ca6" },
   "cmp-path": { "branch": "main", "commit": "91ff86cd9c29299a64f968ebb45846c485725f23" },
   "cmp_luasnip": { "branch": "master", "commit": "18095520391186d634a0045dacaa346291096566" },
-  "everforest": { "branch": "master", "commit": "3e259a9a606778cd9181ecb65301ec92af8a1681" },
   "friendly-snippets": { "branch": "main", "commit": "8d91ba2dc2421a54981115f61b914974f938fa77" },
   "lazy.nvim": { "branch": "main", "commit": "57cce98dfdb2f2dd05a0567d89811e6d0505e13b" },
   "lsp-format.nvim": { "branch": "master", "commit": "ca0df5c8544e51517209ea7b86ecc522c98d4f0a" },
